@@ -1,1 +1,141 @@
 @import './main-article.css';
+
+
+.mainArticle {
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: ". teaser teaser teaser"
+        "cover cover cover cover"
+        "colophon colophon colophon colophon"
+        "byline content content content";
+}
+
+.mainArticle__heading {
+    color: hsl(0, 0%, 16%);
+    font-size: 2.3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mainArticle__summary {
+    color: hsl(0, 0%, 20%);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.93em;
+}
+
+.mainArticle__articleHeader {
+    grid-area: teaser;
+}
+
+.coverPhoto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-area: cover;
+    margin: 0;
+}
+
+.coverPhoto__caption {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-size: 0.7em;
+    color: hsl(0, 0%, 20%);
+    padding-right: 1em;
+    text-align: right;
+}
+
+.coverPhoto__image {
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.caption__photographer {
+    color: hsl(0, 0%, 16%);
+}
+
+
+
+
+
+
+
+.colophon{
+    grid-area: colophon;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.colophon__country{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    font-weight: bold;
+    color: rgb(192, 28, 28);
+    border-bottom: 1px dotted black;
+    width: 90%;
+}
+
+.colophon__publishDate{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    font-weight: bold;
+    border-bottom: 1px dotted black;
+    width: 300%
+}
+
+.colophon__commentCounter{
+    grid-column-start: 4;
+    grid-column-end: 5;
+    justify-self: end;
+    font-weight: bold;
+}
+
+.article__tekst__article__byline{
+    grid-area: colophon;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.article__tekst{
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.article__tekst__article__byline{
+    float: left;
+}
+
+.jakob__peter__img{
+    float: left;
+    border-radius: 1000px;
+}
+
+.abbonement__btn{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.abbonement__btn button{
+    background-color: rgb(192, 28, 28);
+    border: 0px transparent;
+    font-size: 17px;
+    padding: 10px;
+    width: 250px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.socialIcons{
+    float: right;
+    margin: 15px;
+}
+
+.abbonement__link__log-ind-her, a{
+    padding-top: 20px;
+    font-weight: 100;
+    color: gray;
+    text-decoration: none;
+    font-size: 17px;
+}
